@@ -1,33 +1,18 @@
-var can = document.getElementById("ican");
-var ctx = can.getContext("2d");
-var gra = ctx.createLinearGradient(0, 0, 1000, 1000);
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-var a = [0, 0.2, 0.4, 0.6, 0.8, 1];
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1024稀土掘金</title>
+</head>
 
-function chg() {
-    var i = 0;
-    for (i = 0; i <= 5; i++) {
-        a[i] = a[i] + 0.01;
-        if (a[i] >= 1) a[i] = 0;
-    }
-    gra.addColorStop(a[0], "#c08eaf");
-    gra.addColorStop(a[1], "#5698c3");
-    gra.addColorStop(a[2], "#8cc269");
-    gra.addColorStop(a[3], "#e77c8e");
-    gra.addColorStop(a[4], "#fba414");
-    gra.addColorStop(a[5], "#f8df72");
-    ctx.fillStyle = gra;
-    ctx.font = "Bold 80px 微软雅黑";
-    ctx.fillText("1 0 2 4    稀 土 掘 金", 155, 150);
-    ctx.strokeStyle = gra;
-    ctx.font = "Bold 80px 微软雅黑";
-    ctx.strokeText("1 0 2 4    稀 土 掘 金", 150, 150);
-    ctx.save();
+<body>
+    <canvas id="ican" width="1000" height="300" style="border:solid 1px;"></canvas>
+    <div class="fireworks"></div>
+</body>
+<script src="Name_exz.js"></script>
+<script src="Name_fire.js"></script>
 
-    ctx.restore();
-
-    requestAnimationFrame(chg);
-}
-
-
-chg();
+</html>
