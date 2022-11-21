@@ -16,9 +16,18 @@ function chg() {
     gra.addColorStop(a[3], "#e77c8e");
     gra.addColorStop(a[4], "#fba414");
     gra.addColorStop(a[5], "#f8df72");
+    ctx.fillStyle = gra;
+    ctx.font = "Bold 80px 微软雅黑";
+    ctx.fillText("1 0 2 4    稀 土 掘 金", 155, 150);
     ctx.strokeStyle = gra;
     ctx.font = "Bold 80px 微软雅黑";
     ctx.strokeText("1 0 2 4    稀 土 掘 金", 150, 150);
+    ctx.save();
+
+    ctx.restore();
+
+    requestAnimationFrame(chg);
 }
 
-setInterval(chg, 30);
+
+chg();
